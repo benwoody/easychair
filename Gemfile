@@ -16,8 +16,8 @@ group :test do
 	gem 'rspec'
 	gem 'rake'
 	gem 'ZenTest'
-	gem 'autotest-growl'
+	# gem 'autotest-growl'
 	gem 'autotest-fsevent'
 	gem 'rack-test'
-	gem 'spork', '0.8.4'
+	# gem 'spork', '0.8.4'
 end
