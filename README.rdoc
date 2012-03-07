@@ -1,6 +1,6 @@
 = Sinatra Template for use with CouchDB
 
-This is a template losely based off of ZapNaps [sinatra-template](https://github.com/zapnap/sinatra-template).
+This is a template losely based off of ZapNaps Sinatra-Template at: https://github.com/zapnap/sinatra-template.
 
 This has been tested using Ruby 1.9.3 and Couchrest_Model 1.1.2
 
