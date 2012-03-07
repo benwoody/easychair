@@ -22,9 +22,8 @@ Helpers go in the <tt>helpers</tt> dir.  If you add anymore helpers, be sure to 
 
 Add your specs in <tt>spec</tt>. <tt>user_spec.rb</tt> is a sample spec ready to role.  If you create more, be sure to add
 
-``` ruby
-require "#{File.dirname(__FILE__)}/spec_helper"
-```
+	require "#{File.dirname(__FILE__)}/spec_helper"
+
 to the top of the new spec.
 
 To run, you can either run them manually with:
