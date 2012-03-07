@@ -1,0 +1,38 @@
+= Sinatra Template for use with CouchDB
+
+This is a template losely based off of ZapNaps [sinatra-template](https://github.com/zapnap/sinatra-template).
+
+This has been tested using Ruby 1.9.3 and Couchrest_Model 1.1.2
+
+== Setting Up
+
+General setup is done in <tt>environment.rb</tt>  Here, you can application version number, Sinatra port number, and CouchDB database name and port.  Throw your Couch models in the <tt>model</tt> dir.
+
+<tt>application.rb</tt> is where all the fun, Sinatra controller verbage lives.  Place your haml in <tt>views</tt> and sass in <tt>public</tt>.
+
+Helpers go in the <tt>helpers</tt> dir.  If you add anymore helpers, be sure to require them in <tt>init.rb</tt>.
+
+== Testing
+
+Add your specs in <tt>spec</tt>; just require <tt>spec_helper.rb</tt> to pre-configure the test environment. A number of samples are provided (including a sample model, which can be removed). To run the specs, you can either run them manuall with:
+
+rspec spec/
+
+There is also a autotest/rspec/spork setup in <tt>.autotest</tt> and <tt>.rspec</tt> files.
+
+== Getting Started
+
+  bundle install
+  ruby application.rb
+
+== Thanks
+
+This project includes contributions from the following developers via the ZapNaps template:
+
+	* zapnap
+  * garrensmith
+  * bryanwoods
+  * flexd
+  * mcollina
+
+(c) 2012 Ben Woodall. This code is distributed under the MIT license.
