@@ -9,8 +9,6 @@ error do
   'Application error'
 end
 
-require_relative 'helpers/init'
-
 configure do
   set :views, "#{File.dirname(__FILE__)}/views"
 end
