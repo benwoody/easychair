@@ -1,38 +1,41 @@
-= Sinatra Template for use with CouchDB
+= EasyChair - A Sinatra Template for use with CouchDB
 
-This is a template losely based off of ZapNaps Sinatra-Template at: https://github.com/zapnap/sinatra-template.
+This is a template loosely based off of ZapNaps Sinatra-Template at: https://github.com/zapnap/sinatra-template.
 
 This has been tested using Ruby 1.9.3 and Couchrest_Model 1.1.2
 
 == Setting Up
 
-General setup is done in <tt>environment.rb</tt>  Here, you can application version number, Sinatra port number, and CouchDB database name and port.  Throw your Couch models in the <tt>model</tt> dir.
+Be sure to check through the Gemfile.  I have commented out things that you may think extranious, but I use them, so they're there.
 
-<tt>application.rb</tt> is where all the fun, Sinatra controller verbage lives.  Place your haml in <tt>views</tt> and sass in <tt>public</tt>.
+General setup is done in <tt>environment.rb</tt>  Here, you change the can application version number, Sinatra port, and CouchDB database name and port.
+
+<tt>application.rb</tt> is where all the fun, Sinatra controller verbage lives.
+
+Throw your Couch models in the <tt>model</tt> dir.
+
+Place your haml in <tt>views</tt> and sass in <tt>public</tt>.
 
 Helpers go in the <tt>helpers</tt> dir.  If you add anymore helpers, be sure to require them in <tt>init.rb</tt>.
 
 == Testing
 
-Add your specs in <tt>spec</tt>; just require <tt>spec_helper.rb</tt> to pre-configure the test environment. A number of samples are provided (including a sample model, which can be removed). To run the specs, you can either run them manuall with:
+Add your specs in <tt>spec</tt>. <tt>user_spec.rb</tt> is a sample spec ready to role.  If you create more, be sure to add
+
+```ruby
+require "#{File.dirname(__FILE__)}/spec_helper"
+```
+to the top of the new spec.
+
+To run, you can either run them manually with:
 
 rspec spec/
 
-There is also a autotest/rspec/spork setup in <tt>.autotest</tt> and <tt>.rspec</tt> files.
+or there is also an rspec/autotest/spork setup in the <tt>.autotest</tt> and <tt>.rspec</tt> files. The spork setup has been commented out, but feel free to fix that, as <tt>spork --boostrap</tt> isn't dependent on environment.
 
 == Getting Started
 
   bundle install
   ruby application.rb
-
-== Thanks
-
-This project includes contributions from the following developers via the ZapNaps template:
-
-	* zapnap
-  * garrensmith
-  * bryanwoods
-  * flexd
-  * mcollina
 
 (c) 2012 Ben Woodall. This code is distributed under the MIT license.
