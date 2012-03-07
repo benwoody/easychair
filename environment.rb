@@ -18,9 +18,4 @@ configure do
   $LOAD_PATH.unshift("#{File.dirname(__FILE__)}/models")
   Dir.glob("#{File.dirname(__FILE__)}/models/*.rb") { |model| require File.basename(model, '.*') }
 
-  # load helpers
-  $LOAD_PATH.unshift("#{File.dirname(__FILE__)}/helpers")
-  Dir.glob("#{File.dirname(__FILE__)}/helpers/*.rb") { |helper| require File.basename(helper, '.*') }
-
-
 end
