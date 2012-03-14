@@ -19,10 +19,7 @@ end
 
 # enable :sessions
 
-# Show version number on home dir
-# This is set in environment
 get '/' do
-  # $version.to_json
   haml :layout
 end
 

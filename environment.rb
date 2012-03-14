@@ -5,8 +5,6 @@ require 'ostruct'
 
 require 'sinatra' unless defined?(Sinatra)
 
-$version = 'x.x.x'
-
 configure do
   SiteConfig = OpenStruct.new(
                  :url_base => 'http://localhost:4567/',
